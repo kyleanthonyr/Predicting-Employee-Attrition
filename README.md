@@ -1,10 +1,16 @@
-capstone-02-employee-attrition
+# Will my Employee Leave?
+
+### Predicting Employee Resignation
+
 ==============================
 
-This project endeavors to minimize employee attrition costs by leveraging predictive analytics to identify at-risk employees. By analyzing performance, job satisfaction, and salary data, personalized retention strategies are created, aiming to mitigate turnover expenses and enhance overall employee retention.
+A classification model developed as part of a ficitional employee retention strategy to identify at-risk employees for leaving, based on appropriate features, to minimize real and sunk costs of replacement hire.
 
-Project Organization
-------------
+This project employed various data wrangling techniques to resolve messy data into a usable format for model prediction.
+
+In the modeling stage, effective hyperparameter tuning and cross-validation techniques were used for optimizing Logistic regression, SVM and XGBoosted models to handle highly imbalanced data for performant classification of train and test samples.
+
+## Project Organization
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
@@ -51,7 +57,6 @@ Project Organization
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
-
---------
+---
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
