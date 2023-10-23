@@ -30,7 +30,7 @@ Dataset: https://www.kaggle.com/datasets/gladdenme/factory-workers-daily-perform
 
 ## Model Results
 
-![Alt text](<Screenshot 2023-10-22 at 9.34.30 PM.png>)
+![Alt text](model_results.png)
 
 ## Next Steps
 
