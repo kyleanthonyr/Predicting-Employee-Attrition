@@ -1,0 +1,167 @@
+{
+	"sub_ID": {
+		"Type_of_field": "Subject-related",
+		"Description": "Employee ID number for the worker who is the subject of the event reflected in a row."
+	},
+	"sub_fname": {
+		"Type_of_field": "Subject-related",
+		"Description": "The first name of the event’s subject."
+	},
+	"sub_lname": {
+		"Type_of_field": "Subject-related",
+		"Description": "The last name of the event’s subject."
+	},
+	"sub_age": {
+		"Type_of_field": "Subject-related",
+		"Description": "The age of the event’s subject."
+	},
+	"sub_sex": {
+		"Type_of_field": "Subject-related",
+		"Description": "The sex (“M” or “F”) of the employee who is the event’s subject."
+	},
+	"sub_shift": {
+		"Type_of_field": "Subject-related",
+		"Description": "The name of the shift on which the event’s subject works. Possible values are “Shift 1”, “Shift 2”, “Shift 3”, or “unassigned” (for the factory’s lone Production Director, who isn’t assigned to a single shift but instead oversees all of the shifts)."
+	},
+	"sub_team": {
+		"Type_of_field": "Subject-related",
+		"Description": "The name of the team on which the event’s subject works. For an employee working on Shift 1, possible values are “Team 1” through “Team 8” (for persons filling the role of Team Leader or Laborer) or “unassigned” (for the Shift Manager, who isn’t assigned to a single team but instead oversees all of the shift’s teams). Similarly, Shift 2 includes “Team 9” through “Team 16”, and Shift 3 includes “Team 17” through “Team 24”. The factory’s three Shift Managers and one Production Director also have “unassigned” as a value, as they aren’t members of a particular team."
+	},
+	"sub_role": {
+		"Type_of_field": "Subject-related",
+		"Description": "The organizational role of the employee who is the event’s subject. Values include “Production Director,” of which there is exactly 1; “Shift Manager,” of which there are 3; “Team Leader,” of which there are 24; and “Laborer,” of which there are 480."
+	},
+	"sub_coll_IDs": {
+		"Type_of_field": "Subject-related",
+		"Description": "A list containing the ID numbers of the other employees who are immediate coworker-peers of the event’s subject. For a Laborer, this includes the other Laborers serving in the same team at the moment when the event occurred; for a Team Leader, it includes the other seven Team Leaders who were working on the same Shift; for a Shift Manager, it includes the other two Shift Managers; and for the Production Director, the value is “None”. Because Laborers and Team Leaders can quit or be terminated (and replaced) during the course of the simulated time period, the ID numbers of a subject’s colleagues might change from one day to the next."
+	},
+	"sub_colls_same_sex_prtn": {
+		"Type_of_field": "Subject-related",
+		"Description": "A float representing the portion of the subject’s immediate coworker-peers who are of the same sex. (E.g., a female Team Leader who has 4 female and 3 male coworker-peers will have a value of ≈0.5714.) If the subject is the factory’s Production Director (who has no coworker-peers), the value is “None”."
+	},
+	"sub_health_h": {
+		"Type_of_field": "Subject-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Health stat of the event’s subject."
+	},
+	"sub_commitment_h": {
+		"Type_of_field": "Subject-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Commitment stat of the event’s subject."
+	},
+	"sub_perceptiveness_h": {
+		"Type_of_field": "Subject-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Perceptiveness stat of the event’s subject."
+	},
+	"sub_dexterity_h": {
+		"Type_of_field": "Subject-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Dexterity stat of the event’s subject."
+	},
+	"sub_sociality_h": {
+		"Type_of_field": "Subject-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Sociality stat of the event’s subject."
+	},
+	"sub_goodness_h": {
+		"Type_of_field": "Subject-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Goodness stat of the event’s subject."
+	},
+	"sub_strength_h": {
+		"Type_of_field": "Subject-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Strength stat of the event’s subject."
+	},
+	"sub_openmindedness_h": {
+		"Type_of_field": "Subject-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Open-mindedness stat of the event’s subject."
+	},
+	"sub_workstyle_h": {
+		"Type_of_field": "Subject-related",
+		"Description": "The subject’s “Workstyle group” influences his or her Efficacy (which will be elevated, average, or reduced and either stable or variable); number of Disruptions (either elevated, average, or reduced); and number of Ideas (elevated, average, or reduced). Possible values are “Group A”, “Group B”, “Group C”, “Group D”, and “Group E”. Each Workstyle group has its own characteristic pattern of influences."
+	},
+	"sup_ID": {
+		"Type_of_field": "Supervisor-related",
+		"Description": "The employee ID number of the person who was supervising the event’s subject at the time when the event occurred. If the row includes a record component, this supervisor was the person who made the record in the factory’s HRM/ERP system. If the event’s subject was the factory’s Production Director, this field’s value will be “None” (since that person has no supervisor and the event won’t include a record component)."
+	},
+	"sup_fname": {
+		"Type_of_field": "Supervisor-related",
+		"Description": "The first name of the subject’s supervisor. (The value will be “None” if the event’s subject is the factory’s Production Director.)"
+	},
+	"sup_lname": {
+		"Type_of_field": "Supervisor-related",
+		"Description": "The last name of the subject’s supervisor. (The value will be “None” if the event’s subject is the factory’s Production Director.)"
+	},
+	"sup_age": {
+		"Type_of_field": "Supervisor-related",
+		"Description": "The age of the subject’s supervisor. (The value will be “None” if the event’s subject is the factory’s Production Director.)"
+	},
+	"sup_sub_age_diff": {
+		"Type_of_field": "Subject-related",
+		"Description": "An integer representing the age of the event’s subject subtracted from the age of the person who was supervising that subject at the time of the event. (E.g., a 48-year-old Laborer subject with a 35-year-old Team Leader supervisor would yield a value of -13.) If the subject is the factory’s Production Director (who has no supervisor), the value will be “None”."
+	},
+	"sup_sex": {
+		"Type_of_field": "Supervisor-related",
+		"Description": "The sex (“M” or “F”) of the subject’s supervisor. (The value will be “None” if the event’s subject is the factory’s Production Director.)"
+	},
+	"sup_role": {
+		"Type_of_field": "Supervisor-related",
+		"Description": "The organizational role of the subject’s supervisor. Possible values are “Team Leader”, “Shift Manager”, “Production Director”, or “None” (if the subject was the factory’s Production Director)."
+	},
+	"sup_commitment_h": {
+		"Type_of_field": "Supervisor-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Commitment stat of the subject’s supervisor. (The value will be “None” if the event’s subject is the factory’s Production Director.)"
+	},
+	"sup_perceptiveness_h": {
+		"Type_of_field": "Supervisor-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Perceptiveness stat of the subject’s supervisor. (The value will be “None” if the event’s subject is the factory’s Production Director.)"
+	},
+	"sup_goodness_h": {
+		"Type_of_field": "Supervisor-related",
+		"Description": "A float between 0.0 and 1.0 representing the (hidden) Goodness stat of the subject’s supervisor. (The value will be “None” if the event’s subject is the factory’s Production Director.)"
+	},
+	"event_date": { "Type_of_field": "Event-related", "Description": "" },
+	"event_week_in_series": {
+		"Type_of_field": "Event-related",
+		"Description": "The date of the event (i.e., the date on which the underlying behavior was generated by the subject and the corresponding record of the event, if any, was entered in the factory’s HRM/ERP system by the subject’s supervisor. A string in the format of “2021-12-31”."
+	},
+	"event_day_in_series": {
+		"Type_of_field": "Event-related",
+		"Description": "An integer representing the one-indexed week of the simulated time period (from 1 to 78) during which the given event occurred."
+	},
+	"event_weekday_num": {
+		"Type_of_field": "Event-related",
+		"Description": "A zero-indexed integer corresponding to the day of the week on which the given event fell (with Monday = 0)."
+	},
+	"event_weekday_name": {
+		"Type_of_field": "Event-related",
+		"Description": "The English-language name of the day of the week on which the given event fell (e.g., “Monday”)."
+	},
+	"behav_comptype_h": {
+		"Type_of_field": "Event-related",
+		"Description": "A string describing the underlying kind of behavior that the event’s subject actually performed on the given day and which is reflected in the row’s event. Possible values are “Presence”, “Absence”, “Resignation”, “Onboarding”, “Efficacy”, “Idea”, “Lapse”, “Feat”, “Slip”, “Teamwork”, “Disruption”, “Sacrifice”, and “Sabotage”. The value will be “None” in the case of a “Termination” event (which is solely an action on the part of the supervisor, not the subordinate; it includes a record component reflecting the HRM/ERP system entry made by the supervisor but no behavior component on the part of the subordinate)."
+	},
+	"behav_cause_h": {
+		"Type_of_field": "Event-related",
+		"Description": "In the case of a Resignation event, this string indicates the subject’s actual (hidden) reason for quitting his or her job. For other event types, the value is “None”."
+	},
+	"actual_efficacy_h": {
+		"Type_of_field": "Event-related",
+		"Description": "In the case of an Efficacy event, this float indicates the actual level of Efficacy that was displayed by the subject on the given day. The minimum value is 0.0; the maximum value is theoretically unlimited. For other event types, this field’s value will be “None”."
+	},
+	"record_comptype": {
+		"Type_of_field": "Event-related",
+		"Description": "A string describing the type of record made by the subject’s supervisor in the factory’s HRM/ERP system, in connection with the underlying behavior performed by the worker; it’s the record component of the event. Possible values are “Presence”, “Absence”, “Resignation”, “Termination”, “Onboarding”, “Efficacy”, “Idea”, “Lapse”, “Feat”, “Slip”, “Teamwork”, “Disruption”, “Sacrifice”, and “Sabotage”. It’s also possible for a supervisor to have overlooked a given qualitative behavior (e.g., a Feat or Teamwork) and thus to have made no record in the HRM/ERP system; in that case, this field’s value will be “None”."
+	},
+	"record_cause": {
+		"Type_of_field": "Event-related",
+		"Description": "In the case of a Termination event, this string indicates the reason for which the organization terminated the subject’s employment. For other event types, this field will be “None”."
+	},
+	"recorded_efficacy": {
+		"Type_of_field": "Event-related",
+		"Description": "If the event reflected in the row was a subject’s Efficacy level for the given day, this float represents the “official” Efficacy score that was recorded in the factory’s HRM/ERP system by the subject’s supervisor. This number is an estimate of the subject’s Efficacy level that was made by the supervisor, and (depending in part on the supervisor’s personal characteristics), the value may or may not accurately reflect the actual Efficacy level that was demonstrated by the subject on the given day. For other event types, this field’s value will be “None”."
+	},
+	"recorded_note_from_sup": {
+		"Type_of_field": "Supervisor-related",
+		"Description": "An optional written commentary added by the subject’s supervisor in the HRM/ERP system as part of the record component of the event. Such notes are only included for qualitative records (e.g., for events like a Feat or Teamwork), not for a Separation, Onboarding, Attendance, or Efficacy record. If no commentary was added for an event, the field’s value will be “None”."
+	},
+	"record_conf_matrix_h": {
+		"Type_of_field": "Event-related",
+		"Description": "In the case of qualitative events (like a Feat or Teamwork), a string representing the confusion-matrix value for the row’s record component. If the nature of the record entered by the supervisor in the HRM/ERP system accurately reflected that of the underlying behavior, this value will be “True Positive”; if no record was made for the worker’s underlying behavior (e.g., because the supervisor failed to notice the behavior), this value will be “False Negative”. In the case of Efficacy events, this value will be “None”, as Efficacy is recorded using numerical values rather than binary classification; it will also be “None” in the case of an Attendance, Separation, or Onboarding event (which is always recorded correctly). The value will also be “None” when the Production Director generated a qualitative behavior and no record was made for it; that isn’t counted as a “False Negative”, because the Production Director has no supervisor, and it was thus never possible for a record to be made in the HRM/ERP system."
+	}
+}
