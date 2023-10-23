@@ -30,7 +30,7 @@ Dataset: https://www.kaggle.com/datasets/gladdenme/factory-workers-daily-perform
 
 ## Model Results
 
-![Alt text](model_results.png)
+![Alt text](references/model_results.png)
 
 ## Next Steps
 
